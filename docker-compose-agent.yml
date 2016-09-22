@@ -1,0 +1,10 @@
+agent:
+  container_name: kontena-agent
+  image: kontena/agent:latest
+  net: host
+  environment:
+    - KONTENA_URI=wss://${DOCKER_KONTENA_MASTER}:8080/
+    - KONTENA_TOKEN=${KONTENA_TOKEN}
+    - KONTENA_PEER_INTERFACE=eth1
+  volumes:
+    - /var/run/docker.sock:/var/run/docker.sock
