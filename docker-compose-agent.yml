@@ -3,7 +3,7 @@ agent:
   image: kontena/agent:latest
   net: host
   environment:
-    - KONTENA_URI=wss://${DOCKER_KONTENA_MASTER}:8080/
+    - KONTENA_URI=ws://${KONTENA_MASTER}:8080/
     - KONTENA_TOKEN=${KONTENA_TOKEN}
     - KONTENA_PEER_INTERFACE=eth1
   volumes:
